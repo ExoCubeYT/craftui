@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'MinecraftRegular';
+    src: url('../fonts/MinecraftRegular-Bmg3.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MinecraftTen';
+    src: url('../fonts/MinecraftTen-VGORe.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+  --mc-dark: #313233;
+  --mc-mid: #48494A;
+  --mc-light: #D0D1D4;
+  --mc-green: #3C8527;
+  --mc-purple: #7345E5;
+  --mc-border: #1E1E1F;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #0a0a0f;
+  color: #e2e8f0;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(20, 20, 25, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.glass-card {
+  background: rgba(30, 30, 35, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Typography utilities */
+.font-minecraft {
+    font-family: 'MinecraftRegular', sans-serif;
+}
+
+.font-minecraft-bold {
+    font-family: 'MinecraftTen', sans-serif;
+}
+
+/* Glow effects */
+.glow-green {
+  box-shadow: 0 0 30px rgba(60, 133, 39, 0.3);
+}
+
+.glow-purple {
+  box-shadow: 0 0 30px rgba(115, 69, 229, 0.3);
+}
+
+/* Abstract Background Blobs */
+.bg-blob-1 {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(60, 133, 39, 0.15) 0%, rgba(0,0,0,0) 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.bg-blob-2 {
+  position: absolute;
+  bottom: -10%;
+  right: -10%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(115, 69, 229, 0.1) 0%, rgba(0,0,0,0) 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Custom Scrollbar for better integration */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #111112; 
+}
+::-webkit-scrollbar-thumb {
+    background: #3C8527; 
+    border: 2px solid #111112;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #2A641C; 
+}
+
+/* PANORAMA BACKGROUND */
+.panorama-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+    overflow: hidden;
+    background: #000;
+}
+
+.panorama-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.85) 100%), rgba(0,0,0,0.5);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.panorama-cube {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform-style: preserve-3d;
+    animation: rotatePanorama 160s linear infinite;
+    z-index: 1;
+    transform: scale(1.4); /* Ensure viewport corners are always covered */
+}
+
+@keyframes rotatePanorama {
+    from { transform: scale(1.4) perspective(800px) rotateX(15deg) rotateY(0deg); }
+    to { transform: scale(1.4) perspective(800px) rotateX(15deg) rotateY(360deg); }
+}
+
+.cube-face {
+    position: absolute;
+    width: 104vmax;   
+    height: 104vmax;
+    left: -52vmax;
+    top: -52vmax;
+    background-size: cover;
+    background-position: center;
+    image-rendering: crisp-edges;
+    filter: blur(1px) brightness(0.9);
+}
+
+.cube-front  { transform: rotateY(0deg) translateZ(-51.8vmax); background-image: url('../images/panorama/panorama_0.png'); }
+.cube-right  { transform: rotateY(-90deg) translateZ(-51.8vmax); background-image: url('../images/panorama/panorama_1.png'); }
+.cube-back   { transform: rotateY(-180deg) translateZ(-51.8vmax); background-image: url('../images/panorama/panorama_2.png'); }
+.cube-left   { transform: rotateY(90deg) translateZ(-51.8vmax); background-image: url('../images/panorama/panorama_3.png'); }
+.cube-top    { transform: rotateX(-90deg) rotateZ(180deg) translateZ(-51.8vmax); background-image: url('../images/panorama/panorama_4.png'); }
+.cube-bottom { transform: rotateX(90deg) translateZ(-51.8vmax); background-image: url('../images/panorama/panorama_5.png'); }
+
+/* Utility Classes for Minecraft SVGs */
+.image-pixelated {
+    image-rendering: pixelated;
+}
+.image-crisp {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}

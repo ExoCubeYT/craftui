@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components | CraftUI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/exoui.css">
+    <script src="js/uiexo.js" defer></script>
+</head>
+<body class="min-h-screen flex flex-col font-minecraft">
+
+    <!-- PANORAMA BACKGROUND -->
+    <div class="panorama-container">
+        <div class="panorama-cube">
+            <div class="cube-face cube-front"></div>
+            <div class="cube-face cube-back"></div>
+            <div class="cube-face cube-right"></div>
+            <div class="cube-face cube-left"></div>
+            <div class="cube-face cube-top"></div>
+            <div class="cube-face cube-bottom"></div>
+        </div>
+        <div class="panorama-overlay"></div>
+    </div>
+
+    <header class="fixed top-0 w-full z-50 glass-panel border-b border-white/5 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="font-minecraft text-xl tracking-wide flex items-center gap-2 text-white">
+                    CraftUI <span class="text-xs bg-[#7345E5]/20 text-[#7345E5] px-2 py-0.5 rounded-sm border border-[#7345E5]/30">by exocubeyt</span>
+                </a>
+            </div>
+            <nav class="hidden md:flex gap-8 text-sm font-medium text-gray-300">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <a href="components.html" class="text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] transition-all">Components</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-32 pb-20 max-w-7xl mx-auto px-6 w-full relative z-10">
+        <div class="mb-14 transform transition-all duration-700 translate-y-0 opacity-100">
+            <h1 class="text-5xl font-bold font-minecraft text-white mb-4 drop-shadow-lg text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500">Components</h1>
+            <p class="text-gray-400 text-lg max-w-2xl">Preview the exact HTML and CSS styles used by the Blade components. They are built to be effortlessly customizable while remaining 100% faithful to the source material.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- BUTTONS -->
+            <div class="glass-card p-6 rounded-xl space-y-6 hover:shadow-[0_8px_30px_rgba(60,133,39,0.15)] transition-shadow duration-300" id="button-showcase">
+                <h2 class="font-minecraft-bold text-xl text-white border-b border-white/10 pb-2 tracking-wide text-shadow-md">Button</h2>
+                <div class="flex flex-wrap gap-4 font-minecraft text-sm">
+                    <button data-variant="primary" class="btn-demo px-4 py-3 bg-[#3C8527] border-[3px] border-[#1E1E1F] text-white shadow-[inset_0px_-6px_0px_0px_#1D4D13,inset_3px_3px_0_rgba(79,145,60,0.75),inset_-3px_-9px_0_#639D52] hover:bg-[#2A641C] active:top-[2px] active:shadow-none transition-all drop-shadow-[2px_2px_0_rgba(0,0,0,0.4)]">Primary</button>
+                    <button data-variant="secondary" class="btn-demo px-4 py-3 bg-[#7345E5] border-[3px] border-[#1E1E1F] text-white shadow-[inset_0px_-6px_0px_0px_#4A1CAC,inset_3px_3px_0_rgba(162,100,242,0.75),inset_-3px_-9px_0_#8E49EB] hover:bg-[#5D2CC6] active:top-[2px] active:shadow-none transition-all drop-shadow-[2px_2px_0_rgba(0,0,0,0.4)]">Secondary</button>
+                    <button data-variant="danger" class="btn-demo px-4 py-3 bg-[#E54545] border-[3px] border-[#1E1E1F] text-white shadow-[inset_0px_-6px_0px_0px_#8C1818,inset_3px_3px_0_rgba(255,100,100,0.75),inset_-3px_-9px_0_#A82222] hover:bg-[#C62C2C] active:top-[2px] active:shadow-none transition-all drop-shadow-[2px_2px_0_rgba(0,0,0,0.4)]">Danger</button>
+                </div>
+                <div class="bg-black/50 p-4 rounded-md overflow-x-auto text-xs text-gray-400 font-mono border border-white/5" id="button-snippet">
+                    &lt;x-craftui-button variant="primary"&gt;Primary&lt;/x-craftui-button&gt;
+                </div>
+            </div>
+
+            <!-- INPUT -->
+            <div class="glass-card p-6 rounded-xl space-y-6 hover:shadow-[0_8px_30px_rgba(115,69,229,0.15)] transition-shadow duration-300">
+                <h2 class="font-minecraft text-xl text-white border-b border-white/10 pb-2">Input</h2>
+                <div class="flex flex-col space-y-4 font-minecraft max-w-sm">
+                    <div class="flex flex-col space-y-1">
+                        <label class="text-[#D0D1D4] text-sm drop-shadow-[2px_2px_0_rgba(0,0,0,0.5)]">Server IP</label>
+                        <input type="text" placeholder="mc.hypixel.net" class="w-full px-3 py-2 bg-[#313233] border-[3px] border-[#1E1E1F] text-[#D0D1D4] shadow-[inset_0_4px_0_0_#242425] focus:outline-none focus:border-[#3C8527] transition-colors placeholder-[#68696B] hover:border-gray-500">
+                    </div>
+                </div>
+                <div class="bg-black/50 p-4 rounded-md overflow-x-auto text-xs text-gray-400 font-mono border border-white/5">
+                    &lt;x-craftui-input label="Server IP" placeholder="mc.hypixel.net" /&gt;
+                </div>
+            </div>
+
+            <!-- ICONS -->
+            <div class="glass-card p-6 rounded-xl space-y-6 hover:shadow-[0_8px_30px_rgba(60,133,39,0.15)] transition-shadow duration-300" id="icon-showcase">
+                <h2 class="font-minecraft-bold text-xl text-white border-b border-white/10 pb-2 tracking-wide text-shadow-md">Icons (Authentic SVGs)</h2>
+                <div class="flex flex-wrap gap-8 items-end pt-4 pb-4">
+                    <button data-icon="sword" class="icon-demo group flex flex-col items-center gap-2 focus:outline-none">
+                        <div class="icon-wrapper scale-110 -translate-y-1 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] w-12 h-12 inline-flex justify-center items-center drop-shadow-md transform group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300"><img src="svgs/sword.svg" class="w-full h-full object-contain image-pixelated"></div>
+                        <span class="icon-label opacity-100 text-xs text-gray-500 font-minecraft transition-opacity group-hover:opacity-100">sword</span>
+                    </button>
+                    <button data-icon="pickaxe" class="icon-demo group flex flex-col items-center gap-2 focus:outline-none">
+                        <div class="icon-wrapper w-10 h-10 inline-flex justify-center items-center drop-shadow-md transform group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300"><img src="svgs/pickaxe.svg" class="w-full h-full object-contain image-pixelated"></div>
+                        <span class="icon-label opacity-0 text-xs text-gray-500 font-minecraft transition-opacity group-hover:opacity-100">pickaxe</span>
+                    </button>
+                    <button data-icon="diamond" class="icon-demo group flex flex-col items-center gap-2 focus:outline-none">
+                        <div class="icon-wrapper w-8 h-8 inline-flex justify-center items-center drop-shadow-md transform group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300"><img src="svgs/diamond.svg" class="w-full h-full object-contain image-pixelated"></div>
+                        <span class="icon-label opacity-0 text-xs text-gray-500 font-minecraft transition-opacity group-hover:opacity-100">diamond</span>
+                    </button>
+                    <button data-icon="creeper" class="icon-demo group flex flex-col items-center gap-2 focus:outline-none">
+                        <div class="icon-wrapper w-6 h-6 inline-flex justify-center items-center drop-shadow-md transform group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300"><img src="svgs/creeper.svg" class="w-full h-full object-contain image-pixelated"></div>
+                        <span class="icon-label opacity-0 text-xs text-gray-500 font-minecraft transition-opacity group-hover:opacity-100">creeper</span>
+                    </button>
+                </div>
+                <div class="bg-black/50 p-4 rounded-md overflow-x-auto text-xs text-gray-400 font-mono border border-white/5" id="icon-snippet">
+                    &lt;x-craftui-icon name="sword" size="xl" /&gt;
+                </div>
+            </div>
+
+            <!-- DROPDOWN -->
+            <div class="glass-card p-6 rounded-xl space-y-6 hover:shadow-[0_8px_30px_rgba(115,69,229,0.15)] transition-shadow duration-300" id="dropdown-showcase">
+                <h2 class="font-minecraft-bold text-xl text-white border-b border-white/10 pb-2 tracking-wide text-shadow-md">Dropdown</h2>
+                <div class="relative inline-block w-64 font-minecraft text-[#D0D1D4]">
+                    <button id="dropdown-toggle" type="button" class="w-full text-left px-4 py-3 bg-[#313233] border-[3px] border-[#1E1E1F] flex justify-between items-center hover:bg-[#48494A] transition-colors focus:border-[#3C8527] focus:outline-none">
+                        <span id="dropdown-label">Extreme Hills</span>
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="dropdown-menu" style="display: none;" class="absolute z-10 w-full mt-1 bg-[#1E1E1F] border-[3px] border-[#1E1E1F] shadow-lg max-h-60 overflow-y-auto custom-scrollbar">
+                        <button data-option="Plains" class="dropdown-option w-full text-left px-4 py-2 hover:bg-[#3C8527] hover:text-white transition-colors">Plains</button>
+                        <button data-option="Desert" class="dropdown-option w-full text-left px-4 py-2 hover:bg-[#3C8527] hover:text-white transition-colors">Desert</button>
+                        <button data-option="Extreme Hills" class="dropdown-option w-full text-left px-4 py-2 bg-[#313233] text-white hover:bg-[#3C8527] transition-colors">Extreme Hills</button>
+                        <button data-option="Forest" class="dropdown-option w-full text-left px-4 py-2 hover:bg-[#3C8527] hover:text-white transition-colors">Forest</button>
+                    </div>
+                </div>
+                <div class="bg-black/50 p-4 rounded-md overflow-x-auto text-xs text-gray-400 font-mono border border-white/5" id="dropdown-snippet">
+                    &lt;x-craftui-dropdown label="Extreme Hills"&gt;
+                </div>
+            </div>
+
+            <!-- TOOLTIP -->
+            <div class="glass-card p-6 rounded-xl space-y-6 hover:shadow-[0_8px_30px_rgba(60,133,39,0.15)] transition-shadow duration-300 md:col-span-2" id="tooltip-showcase">
+                <h2 class="font-minecraft-bold text-xl text-white border-b border-white/10 pb-2 tracking-wide text-shadow-md">Tooltip</h2>
+                <div class="pt-10 pb-6 flex justify-center">
+                    <div class="relative inline-block" id="tooltip-wrapper">
+                        <button id="tooltip-target" class="px-4 py-3 bg-[#D0D1D4] border-[3px] border-[#1E1E1F] text-[#313233] shadow-[inset_0px_-6px_0px_0px_#6C6E72,inset_3px_3px_0_rgba(255,255,255,0.75),inset_-3px_-9px_0_#E5E6E8] font-minecraft text-sm drop-shadow-[2px_2px_0_rgba(0,0,0,0.2)] hover:-translate-y-1 transition-transform">Hover Me (Diamond Sword)</button>
+                        
+                        <div id="tooltip-popover" style="display: none;" class="absolute z-50 bottom-full left-1/2 transform -translate-x-1/2 mb-3 w-max px-3 py-2 bg-[#100010] border-2 border-[#1E0030] shadow-[0_0_0_1px_#1E0030,inset_0_0_0_2px_#5000C8,inset_0_4px_0_0_#6A00FF] font-minecraft rounded-sm pointer-events-none opacity-0 transition-opacity duration-150">
+                            <div class="text-white text-sm drop-shadow-[2px_2px_0_rgba(0,0,0,0.8)] flex items-center gap-2">
+                                <img src="svgs/sword.svg" class="w-4 h-4 object-contain image-crisp"> Diamond Sword
+                            </div>
+                            <div class="text-[#A8A8A8] text-xs mt-1.5 drop-shadow-[2px_2px_0_rgba(0,0,0,0.8)] border-t border-white/10 pt-1.5">Damage: 7 | Durability: 1561</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ALERT -->
+            <div class="glass-card p-6 rounded-xl space-y-6 hover:shadow-[0_8px_30px_rgba(255,170,0,0.15)] transition-shadow duration-300" id="alert-showcase">
+                <h2 class="font-minecraft-bold text-xl text-white border-b border-white/10 pb-2 tracking-wide text-shadow-md">Alert (Advancement)</h2>
+                
+                <div class="flex gap-2 mb-4">
+                    <button data-alert="success" class="alert-demo text-xs px-2 py-1 bg-[#1E1E1F] text-white border border-white/10 hover:text-white transition-colors uppercase">Success</button>
+                    <button data-alert="warning" class="alert-demo text-xs px-2 py-1 bg-[#1E1E1F] text-gray-500 border border-transparent hover:text-white transition-colors uppercase">Warning</button>
+                    <button data-alert="error" class="alert-demo text-xs px-2 py-1 bg-[#1E1E1F] text-gray-500 border border-transparent hover:text-white transition-colors uppercase">Error</button>
+                </div>
+
+                <div id="alert-success" class="alert-box flex items-start gap-4 px-4 py-3 bg-[#242424] border-[3px] border-[#1E1E1F] text-[#D0D1D4] shadow-[inset_0_0_0_2px_#3A3A3A] drop-shadow-[2px_2px_0_rgba(0,0,0,0.5)] font-minecraft block">
+                    <div class="w-8 h-8 mt-0.5 inline-flex justify-center items-center drop-shadow-[2px_2px_0_rgba(0,0,0,0.5)]"><img src="svgs/diamond.svg" class="w-full h-full object-contain image-crisp"></div>
+                    <div class="flex-1 mt-0.5">
+                        <div class="text-[#55FF55] text-xs mb-1 drop-shadow-[1px_1px_0_rgba(0,0,0,1)] uppercase">Advancement Made!</div>
+                        <div class="text-white text-sm drop-shadow-[1px_1px_0_rgba(0,0,0,1)] leading-snug">Cover Me With Diamonds</div>
+                    </div>
+                </div>
+                
+                <div id="alert-warning" class="alert-box flex items-start gap-4 px-4 py-3 bg-[#242424] border-[3px] border-[#1E1E1F] text-[#D0D1D4] shadow-[inset_0_0_0_2px_#3A3A3A] drop-shadow-[2px_2px_0_rgba(0,0,0,0.5)] font-minecraft hidden">
+                    <div class="w-8 h-8 mt-0.5 inline-flex justify-center items-center drop-shadow-[2px_2px_0_rgba(0,0,0,0.5)]"><img src="svgs/creeper.svg" class="w-full h-full object-contain image-crisp"></div>
+                    <div class="flex-1 mt-0.5">
+                        <div class="text-[#FFAA00] text-xs mb-1 drop-shadow-[1px_1px_0_rgba(0,0,0,1)] uppercase">Warning!</div>
+                        <div class="text-white text-sm drop-shadow-[1px_1px_0_rgba(0,0,0,1)] leading-snug">Creeper approaching from behind.</div>
+                    </div>
+                </div>
+
+                <div id="alert-error" class="alert-box flex items-start gap-4 px-4 py-3 bg-[#242424] border-[3px] border-[#1E1E1F] text-[#D0D1D4] shadow-[inset_0_0_0_2px_#3A3A3A] drop-shadow-[2px_2px_0_rgba(0,0,0,0.5)] font-minecraft hidden">
+                    <div class="w-8 h-8 mt-0.5 inline-flex justify-center items-center drop-shadow-[2px_2px_0_rgba(0,0,0,0.5)]"><img src="svgs/sword.svg" class="w-full h-full object-contain image-crisp"></div>
+                    <div class="flex-1 mt-0.5">
+                        <div class="text-[#FF5555] text-xs mb-1 drop-shadow-[1px_1px_0_rgba(0,0,0,1)] uppercase">Error Occurred</div>
+                        <div class="text-white text-sm drop-shadow-[1px_1px_0_rgba(0,0,0,1)] leading-snug">Failed to execute command.</div>
+                    </div>
+                </div>
+
+                <div class="bg-black/50 p-4 rounded-md overflow-x-auto text-xs text-gray-400 font-mono border border-white/5 mt-4" id="alert-snippet">
+                    &lt;x-craftui-alert type="success" icon="diamond"&gt;Cover Me With Diamonds&lt;/x-craftui-alert&gt;
+                </div>
+            </div>
+
+            <!-- CARD (INVENTORY) -->
+            <div class="glass-card p-6 rounded-xl space-y-6 hover:shadow-[0_8px_30px_rgba(200,200,200,0.15)] transition-shadow duration-300">
+                <h2 class="font-minecraft-bold text-xl text-white border-b border-white/10 pb-2 tracking-wide text-shadow-md">Card (Inventory Container)</h2>
+                <div class="bg-[#C6C6C6] border-[3px] border-[#1E1E1F] p-1 font-minecraft drop-shadow-[2px_2px_0_rgba(0,0,0,0.5)] max-w-sm">
+                    <div class="border-t-[3px] border-l-[3px] border-white/70 border-b-[3px] border-r-[3px] border-[#555555]/80 p-4 shadow-[inset_0_0_0_2px_#C6C6C6] min-h-[140px]">
+                        <div class="font-minecraft text-lg mb-4 text-[#3F3F3F]">Player Inventory</div>
+                        <div class="grid grid-cols-5 gap-1 w-fit">
+                            <!-- Dummy Inventory Slots -->
+                            <div class="w-8 h-8 bg-[#8B8B8B] shadow-[inset_1px_1px_0_rgba(0,0,0,0.8),inset_-1px_-1px_0_#FFF] p-1 flex items-center justify-center"><img src="svgs/sword.svg" class="w-5 h-5" style="image-rendering:-webkit-optimize-contrast"></div>
+                            <div class="w-8 h-8 bg-[#8B8B8B] shadow-[inset_1px_1px_0_rgba(0,0,0,0.8),inset_-1px_-1px_0_#FFF] p-1 flex items-center justify-center"><img src="svgs/pickaxe.svg" class="w-5 h-5" style="image-rendering:-webkit-optimize-contrast"></div>
+                            <div class="w-8 h-8 bg-[#8B8B8B] shadow-[inset_1px_1px_0_rgba(0,0,0,0.8),inset_-1px_-1px_0_#FFF]"></div>
+                            <div class="w-8 h-8 bg-[#8B8B8B] shadow-[inset_1px_1px_0_rgba(0,0,0,0.8),inset_-1px_-1px_0_#FFF] p-1 flex items-center justify-center relative"><img src="svgs/diamond.svg" class="w-4 h-4 opacity-70"><span class="absolute bottom-0 right-0 text-[10px] text-white drop-shadow-[1px_1px_0_rgba(0,0,0,1)] font-minecraft">64</span></div>
+                            <div class="w-8 h-8 bg-[#8B8B8B] shadow-[inset_1px_1px_0_rgba(0,0,0,0.8),inset_-1px_-1px_0_#FFF]"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-black/50 p-4 rounded-md overflow-x-auto text-xs text-gray-400 font-mono border border-white/5">
+                    &lt;x-craftui-card title="Player Inventory"&gt;
+   &lt;!-- Slot Components... --&gt;
+&lt;/x-craftui-card&gt;
+                </div>
+            </div>
+
+            <!-- PROGRESS (XP BAR) -->
+            <div class="glass-card p-6 rounded-xl space-y-6 hover:shadow-[0_8px_30px_rgba(60,133,39,0.15)] transition-shadow duration-300 md:col-span-2" id="progress-showcase">
+                <h2 class="font-minecraft-bold text-xl text-white border-b border-white/10 pb-2 tracking-wide text-shadow-md">Progress (XP Bar)</h2>
+                
+                <div class="flex flex-col md:flex-row gap-8 items-center pt-2">
+                    <!-- Interactive Controls -->
+                    <div class="flex-1 w-full space-y-4 bg-black/30 p-4 rounded-lg border border-white/5">
+                        <div>
+                            <label class="text-[#D0D1D4] text-xs font-minecraft mb-2 block">XP Progress (<span id="progress-val-label">70</span>%)</label>
+                            <input type="range" id="progress-slider" min="0" max="100" value="70" class="w-full accent-[#80FF20]">
+                        </div>
+                        <div>
+                            <label class="text-[#D0D1D4] text-xs font-minecraft mb-2 block">Player Level</label>
+                            <input type="number" id="level-input" value="23" min="0" max="999" class="w-full px-3 py-2 bg-[#313233] border-[3px] border-[#1E1E1F] text-[#D0D1D4] font-minecraft text-sm focus:outline-none focus:border-[#3C8527]">
+                        </div>
+                    </div>
+
+                    <!-- The Progress Bar Preview -->
+                    <div class="flex-[2] w-full py-4 flex flex-col items-center justify-center gap-1">
+                        <div id="progress-level-display" class="text-[#80FF20] font-minecraft text-xl leading-none" style="text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 0px 2px 0 #000, 2px 0px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000;">
+                            23
+                        </div>
+                        <div class="w-full max-w-[364px] h-[14px] border-[2px] border-black bg-[#1c2919] relative flex">
+                            <!-- Progress Fill -->
+                            <div id="progress-fill-display" class="h-full bg-gradient-to-b from-[#8efa3c] via-[#5DDF00] to-[#257300] relative z-0 transition-all duration-100" style="width: 70%;">
+                                <div class="absolute top-0 left-0 right-0 h-[2px] bg-white/30"></div>
+                            </div>
+                            
+                            <!-- Grid Overlays (18 Segments = 17 Dividers) -->
+                            <div class="absolute inset-0 flex z-10 mix-blend-overlay">
+                                <div class="flex-1 border-r-[2px] border-[#000000]/90"></div><div class="flex-1 border-r-[2px] border-[#000000]/90"></div><div class="flex-1 border-r-[2px] border-[#000000]/90"></div><div class="flex-1 border-r-[2px] border-[#000000]/90"></div><div class="flex-1 border-r-[2px] border-[#000000]/90"></div><div class="flex-1 border-r-[2px] border-[#000000]/90"></div><div class="flex-1 border-r-[2px] border-[#000000]/90"></div><div class="flex-1 border-r-[2px] border-[#000000]/90"></div><div class="flex-1 border-r-[2px] border-[#000000]/90"></div><div class="flex-1 border-r-[2px] border-[#000000]/90"></div><div class="flex-1 border-r-[2px] border-[#000000]/90"></div><div class="flex-1 border-r-[2px] border-[#000000]/90"></div><div class="flex-1 border-r-[2px] border-[#000000]/90"></div><div class="flex-1 border-r-[2px] border-[#000000]/90"></div><div class="flex-1 border-r-[2px] border-[#000000]/90"></div><div class="flex-1 border-r-[2px] border-[#000000]/90"></div><div class="flex-1 border-r-[2px] border-[#000000]/90"></div><div class="flex-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-black/50 p-4 rounded-md overflow-x-auto text-xs text-gray-400 font-mono border border-white/5" id="progress-snippet">
+                    &lt;x-craftui-progress value="70" level="23" /&gt;
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-8 text-center text-gray-500 font-minecraft border-t border-white/5 mt-auto bg-[#0a0a0f]/90 backdrop-blur-md relative z-10">
+        100% Free & Open Source library.
+    </footer>
+</body>
+</html>

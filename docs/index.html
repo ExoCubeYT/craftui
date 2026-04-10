@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraftUI | Minecraft-Themed Laravel UI Components</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/exoui.css">
+    <script src="js/uiexo.js" defer></script>
+</head>
+<body class="min-h-screen flex flex-col font-minecraft">
+
+    <!-- PANORAMA BACKGROUND -->
+    <div class="panorama-container">
+        <div class="panorama-cube">
+            <div class="cube-face cube-front"></div>
+            <div class="cube-face cube-back"></div>
+            <div class="cube-face cube-right"></div>
+            <div class="cube-face cube-left"></div>
+            <div class="cube-face cube-top"></div>
+            <div class="cube-face cube-bottom"></div>
+        </div>
+        <div class="panorama-overlay"></div>
+    </div>
+
+    <!-- Header Glass Navbar -->
+    <header class="fixed top-0 w-full z-50 glass-panel border-b border-white/5 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <svg width="32" height="32" viewBox="0 0 16 16" class="text-[#3C8527] image-pixelated" fill="currentColor">
+                    <!-- Simple crafting table icon representation -->
+                    <rect x="2" y="2" width="12" height="12" fill="#5F4229" stroke="#3C8527" stroke-width="1"/>
+                    <rect x="4" y="4" width="8" height="2" fill="#8B603E"/>
+                </svg>
+                <div class="font-minecraft text-xl tracking-wide flex items-center gap-2">
+                    CraftUI
+                    <span class="text-xs bg-[#7345E5]/20 text-[#7345E5] px-2 py-0.5 rounded-sm border border-[#7345E5]/30">by exocubeyt</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex gap-8 text-sm font-medium text-gray-300">
+                <a href="index.html" class="text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] transition-all">Home</a>
+                <a href="components.html" class="hover:text-white transition-colors">Components</a>
+                <a href="https://github.com/exocubeyt/craftui" target="_blank" class="hover:text-white transition-colors">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Hero Content -->
+    <main class="flex-grow pt-32 pb-20 flex items-center relative overflow-hidden">
+        <!-- Floating particles background effect -->
+        <div class="absolute inset-0 pointer-events-none opacity-30 mix-blend-screen">
+            <div class="absolute top-[20%] left-[10%] w-2 h-2 rounded-full bg-[#3C8527] shadow-[0_0_10px_#3C8527] animate-pulse"></div>
+            <div class="absolute top-[60%] right-[15%] w-3 h-3 rounded-full bg-[#7345E5] shadow-[0_0_15px_#7345E5] animate-bounce" style="animation-duration: 4s;"></div>
+            <div class="absolute bottom-[20%] left-[30%] w-1.5 h-1.5 rounded-full bg-[#D0D1D4] shadow-[0_0_8px_#D0D1D4] animate-ping" style="animation-duration: 5s;"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 w-full flex flex-col md:flex-row items-center gap-16 relative z-10">
+            
+            <div class="flex-1 space-y-8">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border-white/10 text-xs font-semibold text-gray-300 transform transition-transform hover:scale-105 duration-300">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#3C8527] shadow-[0_0_8px_#3C8527] relative flex items-center justify-center">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3C8527] opacity-75"></span>
+                    </span>
+                    100% Free & Open Source
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight font-minecraft tracking-tight drop-shadow-xl">
+                    Minecraft <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#3C8527] to-[#7345E5] drop-shadow-2xl">Aesthetic</span> <br>
+                    for Laravel.
+                </h1>
+                
+                <p class="text-lg text-gray-400 max-w-xl leading-relaxed font-medium">
+                    A drop-in UI component library for Laravel Livewire. Think shadcn/ui, but everything looks like it was ripped straight out of the game. Now completely FOSS thanks to the Exocubeyt community.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 pt-4 text-sm font-minecraft">
+                    <a href="components.html" class="relative inline-flex items-center justify-center px-6 py-4 bg-[#3C8527] border-[3px] border-[#1E1E1F] text-white shadow-[inset_0px_-6px_0px_0px_#1D4D13,inset_3px_3px_0_rgba(79,145,60,0.75),inset_-3px_-9px_0_#639D52] hover:bg-[#2A641C] active:top-[2px] active:shadow-none transition-all drop-shadow-[2px_2px_0_rgba(0,0,0,0.4)]">
+                        Get Started
+                    </a>
+                    <a href="https://github.com/exocubeyt/craftui" class="relative inline-flex items-center justify-center px-6 py-4 bg-[#D0D1D4] border-[3px] border-[#1E1E1F] text-[#313233] shadow-[inset_0px_-6px_0px_0px_#6C6E72,inset_3px_3px_0_rgba(255,255,255,0.75),inset_-3px_-9px_0_#E5E6E8] hover:bg-[#B5B6B8] active:top-[2px] active:shadow-none transition-all drop-shadow-[2px_2px_0_rgba(0,0,0,0.2)]">
+                        View Repository
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex-1 w-full max-w-lg transform hover:-translate-y-2 transition-transform duration-500">
+                <div class="glass-panel p-1 rounded-xl p-[2px] bg-gradient-to-br from-[#3C8527]/50 via-gray-900 to-[#7345E5]/50 glow-purple relative overflow-hidden">
+                    <div class="absolute inset-0 bg-white/5 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                    <div class="bg-[#0a0a0f]/95 backdrop-blur-2xl rounded-lg p-6 space-y-6 border border-white/10">
+                        <div class="font-minecraft text-sm tracking-wide border-b border-white/10 pb-4 mb-4 flex justify-between items-center group">
+                            <span class="text-gray-400 group-hover:text-white transition-colors">> composer require exocubeyt/craftui</span>
+                            <img src="svgs/creeper.svg" alt="creeper" class="w-6 h-6 object-contain opacity-50 group-hover:opacity-100 transition-opacity duration-300 image-pixelated">
+                        </div>
+                        
+                        <!-- Mock component preview -->
+                        <div class="space-y-5 font-minecraft text-sm">
+                            <label class="text-[#D0D1D4] drop-shadow-[2px_2px_0_rgba(0,0,0,0.5)]">Player Name</label>
+                            <input type="text" placeholder="Notch" disabled class="w-full px-3 py-2 bg-[#313233] border-[3px] border-[#1E1E1F] text-[#D0D1D4] shadow-[inset_0_4px_0_0_#242425] opacity-80 cursor-not-allowed hover:border-[#3C8527]/50 transition-colors">
+                            
+                            <div class="flex gap-2">
+                                <button disabled class="flex-1 py-3 bg-[#3C8527] border-[3px] border-[#1E1E1F] text-white shadow-[inset_0px_-6px_0px_0px_#1D4D13,inset_3px_3px_0_rgba(79,145,60,0.75),inset_-3px_-9px_0_#639D52] opacity-80 drop-shadow-[2px_2px_0_rgba(0,0,0,0.4)]">Login</button>
+                                <button disabled class="w-14 flex justify-center items-center bg-[#D0D1D4] border-[3px] border-[#1E1E1F] shadow-[inset_0px_-6px_0px_0px_#6C6E72,inset_3px_3px_0_rgba(255,255,255,0.75),inset_-3px_-9px_0_#E5E6E8] opacity-80 relative group overflow-hidden">
+                                    <div class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
+                                    <img src="svgs/sword.svg" alt="sword" class="w-6 h-6 object-contain drop-shadow-md transform group-hover:scale-110 transition-transform image-pixelated">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+</body>
+</html>
