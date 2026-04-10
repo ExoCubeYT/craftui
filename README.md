@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://raw.githubusercontent.com/exocubeyt/craftui/main/docs/svgs/crafting_table.svg" height="80" alt="Crafting Table">
+    <img src="https://www.vhv.rs/dpng/d/562-5623179_better-minecraft-minecraft-crafting-table-icon-hd-png.png" height="80" alt="Crafting Table">
     <h1>CraftUI</h1>
     <p><b>Minecraft-styled components for Laravel Livewire.</b></p>
     <p>Think <i>shadcn/ui</i>, but everything looks like it was ripped straight out of the game.</p>
