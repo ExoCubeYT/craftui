@@ -11,6 +11,7 @@
     <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
     <img src="https://img.shields.io/github/issues/ExoCubeYT/craftui?style=for-the-badge&color=red" />
     <img src="https://img.shields.io/github/last-commit/ExoCubeYT/craftui?style=for-the-badge&color=blue" />
+    <img src="https://img.shields.io/badge/Made%20with-Laravel-red?style=for-the-badge&logo=laravel" />
 </p>
 </div>
 
