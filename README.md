@@ -5,6 +5,13 @@
     <p>Think <i>shadcn/ui</i>, but everything looks like it was ripped straight out of the game.</p>
     <p>
     </p>
+    <p>
+    <img src="https://img.shields.io/github/stars/ExoCubeYT/craftui?style=for-the-badge&color=yellow" />
+    <img src="https://img.shields.io/github/forks/ExoCubeYT/craftui?style=for-the-badge&color=orange" />
+    <img src="https://img.shields.io/github/license/ExoCubeYT/craftui?style=for-the-badge&color=green" />
+    <img src="https://img.shields.io/github/issues/ExoCubeYT/craftui?style=for-the-badge&color=red" />
+    <img src="https://img.shields.io/github/last-commit/ExoCubeYT/craftui?style=for-the-badge&color=blue" />
+</p>
 </div>
 
 ---
