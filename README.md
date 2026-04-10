@@ -4,7 +4,6 @@
     <p><b>Minecraft-styled components for Laravel Livewire.</b></p>
     <p>Think <i>shadcn/ui</i>, but everything looks like it was ripped straight out of the game.</p>
     <p>
-        <a href="https://exocubeyt.github.io/craftui/docs/">View Documentation</a>
     </p>
 </div>
 
